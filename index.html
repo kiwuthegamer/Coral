@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Coral - Text Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Assets/Logo/mini.png">
+</head>
+
+<body onkeydown="document.getElementById('textarea').focus();">
+  <div id="loadingWrapper">
+    <img id="loading" src="Assets/loading.gif">
+  </div>
+  <nav>
+    <div class="section" id="tabs">
+      <div class="logoWrapper">
+        <img src="Assets/Logo/fullInfo.png" class="logo clickable" title="Coral" onclick="toggleInfo()">
+        <div id="aboutMenu">
+          <p>
+            This is Coral!
+          </p>
+        </div>
+      </div>
+      <input id="fileName" onclick="rename()" type="button" value="Untitled Coral Document">
+      <input type="button" value="File" onclick="opentab(0)" title="File">
+      <input type="button" value="Themes" onclick="opentab(1)" title="Themes">
+      <input type="button" value="Special Features" onclick="opentab(2)" title="Special Features">
+    </div>
+  </nav>
+  <div class="section" id="opentab">
+    <div class="tab" hidden>
+      <strong>File</strong><br><br>
+      <button onclick="fileNew()">New</button><button class="pinButton" onclick="pin('New','fileNew()')">📌</button><br>
+      <button onclick="document.querySelector('#openButton').click()">Open</button><button class="pinButton" onclick="pin('Open','fileOpen()')">📌</button><br>
+      <input hidden type="file" id="openButton" accept=".txt">
+      <button onclick="fileDownload()">Download</button><button class="pinButton" onclick="pin('Download','fileDownload()')">📌</button><br>
+    </div>
+    <div class="tab" hidden>
+      <strong>Themes</strong><br><br>
+      <button onclick="setTheme(0)">Coral (Default)</button><button class="pinButton" onclick="pin('Coral (Default)','setTheme(0)')">📌</button><br>
+      <button onclick="setTheme(1)">Light</button><button class="pinButton" onclick="pin('Light','setTheme(1)')">📌</button><br>
+      <button onclick="setTheme(2)">Dark</button><button class="pinButton" onclick="pin('Dark','setTheme(2)')">📌</button><br>
+      <button onclick="setTheme(3)">Deep Ocean</button><button class="pinButton" onclick="pin('Ocean','setTheme(3)')">📌</button><br>
+      <button onclick="setTheme(4)">Sunset</button><button class="pinButton" onclick="pin('Sunset','setTheme(4)')">📌</button><br>
+    </div>
+    <div class="tab" hidden>
+      <strong>Special Features</strong><br><br>
+      <button onclick="spellCheck()">Spell Check</button><button class="pinButton" onclick="pin('Spell Check','spellCheck()')">📌</button><br>
+    </div>
+  </div>
+  <div class="section" id="textarea" contenteditable="true" data-gramm="false" data-gramm_editor="false" data-gramm_editor="false" autofocus></div>
+  <div class="faintTextarea"></div>
+  <div class="section" id="quickselect">
+    <strong>Quick Select</strong><br><br>
+  </div>
+
+  <script src="words.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
