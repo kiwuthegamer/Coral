@@ -10,7 +10,7 @@
 }
 
 * {
-  transition: background-color 0.5s, color 0.5s !important;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 html {
