@@ -290,6 +290,7 @@ body {
   transition: opacity 500ms, left 500ms, top 500ms !important;
   overflow-y: auto;
   pointer-events: none;
+  white-space: pre-line;
 }
 
 #aboutMenu p {
