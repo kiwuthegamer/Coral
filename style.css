@@ -57,7 +57,7 @@ body {
   background-color: var(--tertiary);
   color: var(--black);
   border-radius: 1.5vh;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s !important;
   font-weight: bold;
   font-size: 2.5vh;
 }
@@ -84,7 +84,7 @@ body {
   background-color: var(--tertiary);
   color: var(--black);
   border-radius: 1vh;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s !important;
   width: 47%;
   font-size: 2.5vh;
 }
@@ -194,7 +194,7 @@ body {
   background-color: var(--tertiary);
   color: var(--black);
   border-radius: 1vh;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s !important;
   width: 47%;
   font-size: 2.5vh;
 }
@@ -239,7 +239,7 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
   z-index: 3;
-  transition: 500ms;
+  transition: 500ms !important;
   overflow: clip;
 }
 
@@ -268,7 +268,7 @@ body {
   z-index: 5;
   opacity: 1;
   display: block;
-  transition: opacity 500ms;
+  transition: opacity 500ms !important;
   cursor: progress;
 }
 
@@ -287,7 +287,7 @@ body {
   color: var(--black);
   border-radius: 15px;
   opacity: 1;
-  transition: opacity 500ms, left 500ms, top 500ms;
+  transition: opacity 500ms, left 500ms, top 500ms !important;
   overflow-y: auto;
   pointer-events: none;
 }
