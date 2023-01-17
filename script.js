@@ -49,7 +49,7 @@ document.addEventListener('keyup', function(e) {
       textarea.innerHTML = ftextarea.innerHTML;
     }
   }
-  var wordList = text.split(" ");
+  var wordList = text.replaceAll("\n", " \n ").split(" ");
   /* Word Prediction */
   var currword = wordList[wordList.length - 1];
   var suggestedWord = "";
